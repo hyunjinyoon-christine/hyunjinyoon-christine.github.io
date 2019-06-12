@@ -33,6 +33,8 @@ export default {
         return item.path.startsWith('/posts/')
       } else if (this.$page.frontmatter.bookDetail && item.title) {
         return item.path.startsWith('/book/')
+      } else if (this.$page.frontmatter.blogDetail && item.title) {
+        return item.path.startsWith('/blog/')
       }
     }).sort((a, b) => {
       return new Date(b.frontmatter.date || b.lastUpdated) - new Date(a.frontmatter.date || a.lastUpdated)

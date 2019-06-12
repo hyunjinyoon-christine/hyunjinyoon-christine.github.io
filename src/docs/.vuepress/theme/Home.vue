@@ -82,6 +82,8 @@ export default {
             return item.path.startsWith('/posts/')
           } else if (this.$page.frontmatter.book) {
             return item.path.startsWith('/book/')
+          } else if (this.$page.frontmatter.blog) {
+            return item.path.startsWith('/blog/')
           }
 
         })

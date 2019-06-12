@@ -15,10 +15,11 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: 'Blog', link: '/' },
+      { text: 'TIL', link: '/' },
+      { text: 'Blog', link: '/blog/' },      
       { text: 'Works', link: '/works/' },
       { text: 'Book', link: '/book/' },
-      { text: 'About', link: '/about/' }
+      { text: 'About', link: '/about/' }     
     ],
     sidebar: 'auto'  
   },
