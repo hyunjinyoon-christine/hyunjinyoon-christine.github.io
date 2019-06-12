@@ -2,8 +2,7 @@
   <div class="page py-md-5 px-0 py-4">
     <slot name="top"/>
     <div class="border-bottom pb-3 mb-4">
-      <h3>
-        <span class="text-primary"># </span>
+      <h3>        
         {{this.$page.frontmatter.title}}
       </h3>
     </div>

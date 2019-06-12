@@ -41,7 +41,7 @@
     <Works v-else-if="$page.frontmatter.works"/>
 
     <BookDetail
-      v-else-if="$page.frontmatter.bookDetail || $page.frontmatter.postDetail"/>
+      v-else-if="$page.frontmatter.bookDetail"/>
 
     <WorkDetail v-else-if="$page.frontmatter.worksDetail"/>
 

@@ -3,10 +3,10 @@
     <slot name="top"/>
     <div class="border-bottom pb-3 mb-4">
       <h3>
-        <span class="text-primary"># </span>
+        <!-- <span class="text-primary"># </span> -->
         {{this.$page.frontmatter.title}}
       </h3>
-      <div class="mt-2 ml-4 text-secondary">
+      <div class="mt-2 text-secondary">
         {{this.$page.frontmatter.writer}}
       </div>
     </div>
