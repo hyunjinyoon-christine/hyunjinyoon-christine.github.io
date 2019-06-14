@@ -30,4 +30,5 @@ function Invitation(who, what, when, where) { //생성자명은 항상 대문자
 2. this는 이 비어있는 객체를 가리키고, 그 객체에 프로퍼티를 추가한 것 = 생성자 함수에서 정의한 this는 생성자 함수로 생성된 인스턴스가 된다
 
 ### Refer
-https://victorydntmd.tistory.com/51
+https://victorydntmd.tistory.com/51  
+[헤드퍼스트 자바스크립트](http://www.yes24.com/Product/goods/15895038)
