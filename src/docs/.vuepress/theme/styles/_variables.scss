@@ -1,11 +1,12 @@
 // Color system
 $blue:    #1360f6;
 $gray-900: #212529;
+$gray-300: #dee2e6;
 $dark: $gray-900;
 
 
 // Code
-$pre-color: #fff;
+$pre-color: $gray-300;
 
 ul {
   padding-inline-start: 1rem;

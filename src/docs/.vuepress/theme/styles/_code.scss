@@ -3,17 +3,144 @@ $codeLang : js ts html md vue css sass scss less stylus go java c sh yaml py;
 
 // Blocks of code
 pre {
-  background: $gray-900;
+  background-color: $gray-900;
   padding: 1rem;
   display: block;  
   color: $pre-color;
   border-radius: $border-radius;
-
-  // Account for some code outputs that place code tags in pre tags
-  code {
-    @include font-size(inherit);
-    color: inherit;
-    word-break: normal;
-  }
 }
 
+div {
+  &[class*="language-"] {
+    position: relative;
+    background-color: $gray-900;    
+    border-radius: $border-radius;
+
+    .highlight-lines {
+      user-select: none;
+      padding-top: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      line-height: 1.4;
+
+      .highlighted {
+        background-color: rgba(0, 0, 0, 0.66);
+      }
+    }
+
+    pre {
+      background: transparent;
+      position: relative;
+      z-index: 1;
+
+      &[class*="language-"] {
+        background: transparent;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 3;
+      top: 0.8em;
+      right: 1em;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:not(.line-numbers-mode) .line-numbers-wrapper {
+      display: none;
+    }
+
+    &.line-numbers-mode {
+      .highlight-lines .highlighted {
+        position: relative;
+
+        &:before {
+          content: ' ';
+          position: absolute;
+          z-index: 3;
+          left: 0;
+          top: 0;
+          display: block;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.66);
+        }
+      }
+
+      pre {
+        vertical-align: middle;
+      }
+
+      .line-numbers-wrapper {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.3);
+        padding: 1.25rem 0;
+        line-height: 1.4;
+
+        br {
+          user-select: none;
+        }
+
+        .line-number {
+          position: relative;
+          z-index: 4;
+          user-select: none;
+          font-size: 0.85em;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 6px 0 0 6px;
+        border-right: 1px solid rgba(0, 0, 0, 0.66);
+      }
+    }
+  }
+
+  &[class~="language-$codeLang"]:before {
+    content: '$codeLang';
+  }
+
+  &[class~="language-javascript"]:before {
+    content: "js";
+  }
+
+  &[class~="language-typescript"]:before {
+    content: "ts";
+  }
+
+  &[class~="language-markup"]:before {
+    content: "html";
+  }
+
+  &[class~="language-markdown"]:before {
+    content: "md";
+  }
+
+  &[class~="language-json"]:before {
+    content: "json";
+  }
+
+  &[class~="language-ruby"]:before {
+    content: "rb";
+  }
+
+  &[class~="language-python"]:before {
+    content: "py";
+  }
+
+  &[class~="language-bash"]:before {
+    content: "sh";
+  }
+}
