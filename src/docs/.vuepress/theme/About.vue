@@ -9,14 +9,7 @@
                   Front-End Developer or Product Designer<br>
                   5년동안 프로덕트 디자이너로 일했고 Front-End 공부를 하고 있는 윤현진입니다.              
               </div>
-              <div class="d-flex mt-2">                
-                <div class="mr-3">
-                    <a href="http://tiny.cc/gxwp4y" target="_blank" class="text-secondary">
-                        <u class="hover-color">
-                            디자인 포트폴리오
-                        </u>
-                    </a>                    
-                </div>                
+              <div class="d-flex mt-2">
                 <div>               
                     <a href="https://github.com/hyunjinyoon-christine" target="_blank" class="text-secondary mr-1">
                         <i class="fab fa-github fa-lg hover-color"></i>
