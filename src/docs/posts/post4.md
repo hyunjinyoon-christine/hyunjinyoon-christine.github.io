@@ -4,29 +4,29 @@ excerpt: 자바스크립트는 어떻게 작동하는가?
 date: 2019-06-05
 ---
 
-변수의 유효범위, 함수의 유효범위와 호이스팅, 유효범위 체인 복습.
-
+변수의 유효범위, 함수의 유효범위와 호이스팅, 유효범위 체인 복습.  
 유효범위 체인이 이해가 가지 않아서 인터넷으로 따로 검색
 
 ## 렉시컬 스코프(lexically scoped)
 
-언어적으로 유효범위를 가지고 있다고 책에 서술되어 있으나 이해가 가지 않음.
+언어적으로 유효범위를 가지고 있다고 책에 서술되어 있으나 이해가 가지 않음.  
+아래 인터넷에서 적절한 예시와 설명을 찾았다.
 
-아래 인터넷에서 적절한 예시와 설명을 찾았다. 
+```javascript
+var x = 1;
 
-    var x = 1;
-    
-    function foo() {
-      var x = 10;
-      bar(); --> 호출된 시점
-    }
-    
-    function bar() {
-      console.log(x); -->선언된 시점
-    }
+function foo() {
+    var x = 10;
+    bar(); --> 호출된 시점
+}
 
-    foo(); // ?
-    bar(); // ?
+function bar() {
+    console.log(x); -->선언된 시점
+}
+
+foo(); // ?
+bar(); // ?
+```
 
 1. 함수를 어디서 선언하였는지에 따라 상위 스코프를 결정
     1. 함수 bar의 스코프는 전역
@@ -45,59 +45,58 @@ date: 2019-06-05
 1. 렉시컬 스코프
 2. 함수레벨 스코프 ( +블록 레벨 스코프-ES6)
 
-자바스크립트 엔진은 코드를 인터프리팅 하기 전에 그 코드를 먼저 컴파일한다.
-
+자바스크립트 엔진은 코드를 인터프리팅 하기 전에 그 코드를 먼저 컴파일한다.  
 var a = 2; 를 두 개의 구문으로 분리하여 본다.
 
 1. `var a;`
 2. `a = 2;`
 
-변수 선언(생성) 단계와 초기화 단계를 나누고 → 선언 단계에서는 그 선언이 소스코드의 어디에 위치하든 해당 스코프의 컴파일단계에서 처리 
-
-(언어 스펙상으로 변수는 렉시컬 환경이 인스턴스화되고 초기화될 때 생성된다고 한다.)
-
-= 선언단계가 스코프의 꼭대기로 호이스팅("끌어올림")됨
-
+변수 선언(생성) 단계와 초기화 단계를 나누고 → 선언 단계에서는 그 선언이 소스코드의 어디에 위치하든 해당 스코프의 컴파일단계에서 처리  
+(언어 스펙상으로 변수는 렉시컬 환경이 인스턴스화되고 초기화될 때 생성된다고 한다.)  
+= 선언단계가 스코프의 꼭대기로 호이스팅("끌어올림")됨  
 참고: 블록스코프인 let도 호이스팅이 된다. 그렇지만 선언 전에 참조할 경우 undefined를 반환하지 않고 ReferenceError를 발생시키는 특징이 있다.
 
-    function hoistingExam(){  
-        console.log("value="+value);
-        var value =10;
-        console.log("value="+value);
-    }
-    hoistingExam();
-    
-    //실행결과
-    /*
-    value= undefined  
-    value= 10  
-    */
+```javascript
+function hoistingExam(){  
+    console.log("value="+value);
+    var value =10;
+    console.log("value="+value);
+}
+hoistingExam();
+//실행결과
+/*
+value= undefined  
+value= 10  
+*/
+```
 
 ## 함수의 호이스팅
 
 함수 선언문 방식만 호이스팅이 가능하다
 
-    // 함수 선언문
-    hoistingExam();  
-    function hoistingExam(){  
-        var hoisting_val =10;
-        console.log("hoisting_val ="+hoisting_val);
-    }
-    //실행결과
-    /*
-    hoisting_val =10  
-    */
-    
-    //함수 표현식
-    hoistingExam2();  
-    var hoistingExam2 = function(){  
-        var hoisting_val =10;
-        console.log("hoisting_val ="+hoisting_val);
-    }
-    //실행결과
-    /*
-    hoistingExam2 of object is not a function  
-    */
+```javascript
+// 함수 선언문
+hoistingExam();  
+function hoistingExam(){  
+    var hoisting_val =10;
+    console.log("hoisting_val ="+hoisting_val);
+}
+//실행결과
+/*
+hoisting_val =10  
+*/
+
+//함수 표현식
+hoistingExam2();  
+var hoistingExam2 = function(){  
+    var hoisting_val =10;
+    console.log("hoisting_val ="+hoisting_val);
+}
+//실행결과
+/*
+hoistingExam2 of object is not a function  
+*/
+```
 
 1. 함수 표현 식과 Function생성자를 통해 함수를 정의하는 방법은 호이스팅이 되지 않는다.
     1. 변수에 함수를 초기화(= 함수변수)
