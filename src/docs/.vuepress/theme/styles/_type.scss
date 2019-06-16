@@ -5,8 +5,10 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-h3 {
-  margin-bottom: 0;
+.content {
+  h2,h3,h4,h5 {
+    margin-top: 2rem;
+  }
 }
 
 .hover-underline {
