@@ -1,9 +1,11 @@
 ---
 home: 1
-title: Home
+title: Hyunjin Yoon Dev blog
 meta:
-  - name: description
-    content: Page description
-  - name: keywords
-    content: js vuejs vuepress
+  - property: og:title
+    content: Hyunjin Yoon Dev blog
+  - property: og:description
+    content: Hyunjin Yoon Dev blog
+  - property: og:image
+    content: /upload/profile.png
 ---
