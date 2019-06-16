@@ -1,0 +1,19 @@
+// code
+$codeLang : js ts html md vue css sass scss less stylus go java c sh yaml py;
+
+// Blocks of code
+pre {
+  background: $gray-900;
+  padding: 1rem;
+  display: block;  
+  color: $pre-color;
+  border-radius: $border-radius;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    @include font-size(inherit);
+    color: inherit;
+    word-break: normal;
+  }
+}
+
