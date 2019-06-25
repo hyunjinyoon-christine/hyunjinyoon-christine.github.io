@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2019.06.25 | Hyunjin Yoon</title>
+    <meta name="description" content="blog">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+    <link rel="preload" href="/assets/css/0.styles.c77bdf12.css" as="style"><link rel="preload" href="/assets/js/app.31621581.js" as="script"><link rel="preload" href="/assets/js/27.85a41ba6.js" as="script"><link rel="prefetch" href="/assets/js/10.5530b76e.js"><link rel="prefetch" href="/assets/js/11.6b6a07f9.js"><link rel="prefetch" href="/assets/js/12.f98cd25e.js"><link rel="prefetch" href="/assets/js/13.4b7ae5fa.js"><link rel="prefetch" href="/assets/js/14.3196709c.js"><link rel="prefetch" href="/assets/js/15.1cd8960e.js"><link rel="prefetch" href="/assets/js/16.4b7453bd.js"><link rel="prefetch" href="/assets/js/17.4a987d2d.js"><link rel="prefetch" href="/assets/js/18.ef7e0970.js"><link rel="prefetch" href="/assets/js/19.e240aab4.js"><link rel="prefetch" href="/assets/js/2.bdc04ea5.js"><link rel="prefetch" href="/assets/js/20.7c93113c.js"><link rel="prefetch" href="/assets/js/21.8fa57849.js"><link rel="prefetch" href="/assets/js/22.2c166f03.js"><link rel="prefetch" href="/assets/js/23.7fedafbe.js"><link rel="prefetch" href="/assets/js/24.7aadb0f4.js"><link rel="prefetch" href="/assets/js/25.52865bcd.js"><link rel="prefetch" href="/assets/js/26.2b40e783.js"><link rel="prefetch" href="/assets/js/28.dde7d6e4.js"><link rel="prefetch" href="/assets/js/29.a98ff556.js"><link rel="prefetch" href="/assets/js/3.8e0af079.js"><link rel="prefetch" href="/assets/js/4.cdc6d09d.js"><link rel="prefetch" href="/assets/js/5.9058903d.js"><link rel="prefetch" href="/assets/js/6.6e0397c4.js"><link rel="prefetch" href="/assets/js/7.20383885.js"><link rel="prefetch" href="/assets/js/8.2c8cc51f.js"><link rel="prefetch" href="/assets/js/9.fadf510b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c77bdf12.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container container"><header class="navbar d-flex justify-content-center justify-content-md-between px-md-0"><div><a href="/" class="home-link mt-2 router-link-active"><!----> <span class="site-name text-dark">Hyunjin Yoon</span></a></div> <div class="links" style="max-width:nullpx;"><nav class="nav-links can-hide mr-md-3"><div class="nav-item"><a href="/" class="nav-link  px-2">TIL</a></div><div class="nav-item"><a href="/blog/" class="nav-link  px-2">Blog</a></div><div class="nav-item"><a href="/works/" class="nav-link  px-2">Works</a></div><div class="nav-item"><a href="/book/" class="nav-link  px-2">Book</a></div><div class="nav-item"><a href="/about/" class="nav-link  px-2">About</a></div> <!----></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="page py-md-5 px-0 py-4"> <div class="border-bottom pb-3 mb-4"><h3>        
+      2019.06.25
+    </h3></div> <div class="content"><h2 id="트레일링-슬래시-trailing-slash"><a href="#트레일링-슬래시-trailing-slash" aria-hidden="true" class="header-anchor">#</a> 트레일링 슬래시(trailing slash)</h2> <pre><code>https://www.google.com/example/ -&gt; 디렉토리입니다.
+https://www.google.com/example -&gt; 파일입니다.
+</code></pre> <ol><li>trailing slash를 통해 해당 URL이 리소스인지 파일인지 구분
+<ol><li>trailing slash가 있는 경우 → 리소스 확인
+<ol><li>해당 이름의 디렉토리(폴더) 확인</li> <li>디렉토리가 있다면 그 안의 기본파일 (index.html) 확인</li> <li>= 있는 경우는 폴더로 인식되어 그 아래에 있는 index.html을 표시</li></ol></li> <li>trailing slash가 없는 경우 → 파일 확인
+<ol><li>해당 이름의 파일이 존재하는지 확인</li> <li>없을 경우 해당 이름의 디렉토리 확인</li> <li>디렉토리가 있으면 그 안의 기본파일(index.html)을 확인
+<ol><li>여기서 브라우져에서 자동으로 trailing slash를 확인해줌</li></ol></li></ol></li></ol></li> <li>리소스와 파일에 맞게 trailing slash를 붙이면 파일 확인을 하는 동작을 생략할 수 있으므로 응답 속도가 빨라진다.</li></ol> <h2 id="도메인-url에도-trailing-slash를-붙여야-할까"><a href="#도메인-url에도-trailing-slash를-붙여야-할까" aria-hidden="true" class="header-anchor">#</a> 도메인 URL에도  trailing slash를 붙여야 할까?</h2> <ol><li>path를 제외한 도메인 url
+<ol><li>= 하위 경로를 제외하고 웹서버까지만 명시</li></ol></li> <li>도메인 URL에도 trailing slash 를 붙이는게 좋다.</li> <li>로딩속도가 더 빠름</li> <li><a href="http://www.naver.com" target="_blank" rel="noopener noreferrer"><code>http://www.naver.com</code><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> → <code>http://www.naver.com/</code> <ol><li>http://www.naver.com/
+<ol><li>HTTPS 프로토콜 + 도메인 네임 호스트 + 호스트 루트 경로 /</li></ol></li> <li>http://www.naver.com
+<ol><li>https 프로토콜 + 도메인 네임 호스트</li> <li>리소스가 디렉토리(폴더)인지 파일인지 명시한 것이 아님. 리소스 장체를 명시하지 않은 것
+<ol><li>리소스가 파일, 디렉토리인지 결정하는 요소는 host가 아니라 path에서 일어나는 것</li></ol></li> <li>trailing slash는 리소스 종류 구분자 라기 보다는, 리소스 경로로 보아야.</li></ol></li></ol></li></ol> <h2 id="url"><a href="#url" aria-hidden="true" class="header-anchor">#</a> URL</h2> <ol><li>도메인 + 경로 = 도메인을 포함한 경로</li> <li>프로토콜://정보를 가진 컴퓨터 이름/디렉터리 이름/파일 네임으로 구성된다.</li> <li><strong>호스트 Host name</strong> <ol><li>호스트 명은 네트워크에 연결된 장치 또는 서버들에 부여되는 고유한 이름으로 호스트 명은 IP 주소나 MAC 주소와 같은 기계적인 이름을 대신하여 일반인이 쉽게 읽고 이해할 수 있는 이름으로 만들어진다.</li> <li>www 도 여기에 포함</li></ol></li> <li><strong>2차 도메인, 메인도메인, 도메인</strong> <ol><li>일반적으로 도메인 둥록/구매처에서 등록하여 사용하는 도메인을 가리키며 서브 도메인에 대응하여 메인 도메인(또는 zone apex/root domain/naked domain/bare domain)으로 불리기도 하며,3차 도메인과 혼용하여 부르기도 합니다.</li></ol></li> <li><strong>포트넘버</strong></li> <li><strong>디렉토리 directory</strong> <ol><li>해당 파일(또는 자원)이 서버의 어디에 있는지를 나타내는 경로로서 초기의 웹에서는 웹 서버상에서 물리적 파일 위치를 의미했다.</li> <li>최근에는, 실제 물리적 경로를 나타내지 않고, 웹 서버에서 추상화하여 보여준다.</li></ol></li> <li><strong>파일 file</strong> <ol><li>HTML(또는 XHTML), CSS 문서, 자바스크립트, 이미지, 문서,동영상 등의 파일</li></ol></li> <li><strong>쿼리 Query String</strong></li></ol> <h2 id="host-name과-domain-name의-차이"><a href="#host-name과-domain-name의-차이" aria-hidden="true" class="header-anchor">#</a> Host name과 Domain name의 차이</h2></div> <section class="prev-next-links mt-5 pt-4 border-top"><div class="links-wrapper d-flex justify-content-between justify-content-end"><div><!----></div> <div><!----></div></div></section> </div> <!----> <footer class="footer pb-5 text-secondary">
+  Hyunjin Yoon
+  | Powered by
+  <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">
+    VuePress
+  </a>
+  © 2019
+</footer></div></div>
+    <script src="/assets/js/app.31621581.js" defer></script><script src="/assets/js/27.85a41ba6.js" defer></script>
+  </body>
+</html>
