@@ -43,8 +43,12 @@ date: 2019-06-25
 3. **호스트 Host name**
     1. 호스트 명은 네트워크에 연결된 장치 또는 서버들에 부여되는 고유한 이름으로 호스트 명은 IP 주소나 MAC 주소와 같은 기계적인 이름을 대신하여 일반인이 쉽게 읽고 이해할 수 있는 이름으로 만들어진다.
     2. www 도 여기에 포함
+        1. ‘www.’ 부분은 웹브라우저에게 gabia.com이라는 도메인 이름으로 운영되는World Wide Web 인터페이스를 찾고 있다고 알려준다.
+        2. 호스트명은 서버의 운영 주체마다 다르게 설정할 수 있으나 서버의 특징을 나타낼 수 있는 용어가 되어야 하므로, 전세계 표준 통신 규약에 따라 같은 역할을 수행하는 서버는 명칭이 동일
+    3. 각 서버 또는 서비스의 영역을 구분하기 위해 사용
+
 4. **2차 도메인, 메인도메인, 도메인**
-    1. 일반적으로 도메인 둥록/구매처에서 등록하여 사용하는 도메인을 가리키며 서브 도메인에 대응하여 메인 도메인(또는 zone apex/root domain/naked domain/bare domain)으로 불리기도 하며,3차 도메인과 혼용하여 부르기도 합니다.
+    1. 일반적으로 도메인 등록/구매처에서 등록하여 사용하는 도메인을 가리키며 서브 도메인에 대응하여 메인 도메인(또는 zone apex/root domain/naked domain/bare domain)으로 불리기도 하며,3차 도메인과 혼용하여 부르기도 합니다.
 5. **포트넘버**
 6. **디렉토리 directory**
     1. 해당 파일(또는 자원)이 서버의 어디에 있는지를 나타내는 경로로서 초기의 웹에서는 웹 서버상에서 물리적 파일 위치를 의미했다.
@@ -52,5 +56,22 @@ date: 2019-06-25
 7. **파일 file**
     1. HTML(또는 XHTML), CSS 문서, 자바스크립트, 이미지, 문서,동영상 등의 파일
 8. **쿼리 Query String**
+    1. url에 전달할 문자열을 지정. 파일에 3개의 쿼리 세그먼트와 각각의 값이 전송된다.
 
 ## Host name과 Domain name의 차이
+
+1. 도메인은 그룹의 개념이고 호스트는 그룹에 속한 컴퓨터나 시스템 하나하나를 말한다.
+2. 비유하자면 도메인은 회사의 전화번호 / 호스트는 내선번호
+
+### Refer
+
+[https://library.gabia.com/contents/domain/4005](https://library.gabia.com/contents/domain/4005)
+
+[https://jhleed.tistory.com/16](https://jhleed.tistory.com/16)
+
+[https://www.codns.com/b/B05-195](https://www.codns.com/b/B05-195)
+
+[https://gamtoggi.tistory.com/82](https://gamtoggi.tistory.com/82)
+
+[https://ohgyun.com/274]
+(https://ohgyun.com/274)
