@@ -1,5 +1,6 @@
 ---
-home: 1
+about: 1
+# home: 1
 title: Hyunjin Yoon Dev blog
 meta:
   - property: og:title

@@ -36,7 +36,7 @@
       <component :is="$page.frontmatter.layout"/>
     </div>
 
-    <Home v-else-if="$page.frontmatter.home || $page.frontmatter.book || $page.frontmatter.blog"/>
+    <Home v-else-if="$page.frontmatter.book || $page.frontmatter.blog"/>
 
     <Works v-else-if="$page.frontmatter.works"/>
 
@@ -45,7 +45,7 @@
 
     <WorkDetail v-else-if="$page.frontmatter.worksDetail"/>
 
-    <About v-else-if="$page.frontmatter.about"/>
+    <About v-else-if="$page.frontmatter.home || $page.frontmatter.about"/>
 
     <Page
       v-else
