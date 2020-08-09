@@ -1,6 +1,6 @@
 ---
 worksDetail: 1
-title: soomgo app landing page
+title: Soomgo app landing page
 image : "/upload/soomgo-landing_thumbnail.png"
 date : 2017
 ---

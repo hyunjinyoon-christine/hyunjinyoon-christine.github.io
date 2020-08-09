@@ -91,8 +91,7 @@ function find (page, items, offset) {
 @require './styles/wrapper.styl'
 .page
   .content
-    img
-      width 100%
+
     h3
       font-weight 400
 .page-edit

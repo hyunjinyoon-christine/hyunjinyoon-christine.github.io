@@ -167,8 +167,8 @@ function find (page, items, offset) {
 @require './styles/wrapper.styl'
 .page
   .content
-    img
-      width 100%
+    text-align center
+    width 100%
 .page-edit
   @extend $wrapper
   padding-top 1rem

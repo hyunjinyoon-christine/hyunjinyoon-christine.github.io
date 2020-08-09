@@ -1,6 +1,6 @@
 ---
 worksDetail: 1
-title: soomgo app
+title: Soomgo app
 image : "/upload/soomgo-app_thumbnail.png"
 date : 2016
 ---
