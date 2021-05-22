@@ -6,7 +6,7 @@
           안녕하세요, 윤현진입니다.
       </h2>
       <h3 class="font-weight-light">
-        5년동안 프로덕트 디자이너로 일했고 개발 공부를 하고 있습니다.
+        제품 디자이너로 일하고 있습니다.
       </h3>
 
 
@@ -28,6 +28,9 @@
     <div class="specification mt-3">
       <ul class="pl-0">
         <b class="text-primary">Experience</b>        
+        <li>
+          Delightroom Digital Product Designer Oct 2020 – Present
+        </li>
         <li>
           Fanmaum Digital Product Designer, Web publisher Sep 2018 – Apr 2019
         </li>
